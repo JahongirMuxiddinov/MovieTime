@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="198" id="KGk-i7-Jjw" customClass="MovieCell" customModule="MovieTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="198"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="198"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qsy-ew-Jo2">
+                        <rect key="frame" x="0.0" y="5" width="173.33333333333334" height="188"/>
+                    </imageView>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRf-FO-cnK">
+                        <rect key="frame" x="371" y="74.333333333333329" width="52" height="49.333333333333329"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="play.circle" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="37"/>
+                        </state>
+                        <connections>
+                            <action selector="playBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gpi-hR-d2B"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv8-GP-Q6d">
+                        <rect key="frame" x="183.33333333333337" y="49.666666666666657" width="182" height="99"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Qsy-ew-Jo2" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="1Qt-uI-qgb"/>
+                    <constraint firstItem="Qsy-ew-Jo2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4Sj-WR-2Em"/>
+                    <constraint firstAttribute="bottom" secondItem="Qsy-ew-Jo2" secondAttribute="bottom" constant="5" id="5SV-ba-f8R"/>
+                    <constraint firstItem="dv8-GP-Q6d" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="Dt9-fq-IVN"/>
+                    <constraint firstItem="dv8-GP-Q6d" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.420323" id="K1h-YL-Lme"/>
+                    <constraint firstAttribute="trailing" secondItem="rRf-FO-cnK" secondAttribute="trailing" constant="10" id="X2O-lM-BcW"/>
+                    <constraint firstItem="Qsy-ew-Jo2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="c7Q-Lx-vSf"/>
+                    <constraint firstItem="rRf-FO-cnK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.12" id="cGL-cO-f91"/>
+                    <constraint firstItem="rRf-FO-cnK" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.25" id="eVn-Xd-tcO"/>
+                    <constraint firstItem="dv8-GP-Q6d" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="m2P-mw-C2P"/>
+                    <constraint firstItem="dv8-GP-Q6d" firstAttribute="leading" secondItem="Qsy-ew-Jo2" secondAttribute="trailing" constant="10" id="rZ8-7A-q8b"/>
+                    <constraint firstItem="rRf-FO-cnK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wye-LV-JQT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieImage" destination="Qsy-ew-Jo2" id="sqg-zj-6dF"/>
+                <outlet property="movieNameLbl" destination="dv8-GP-Q6d" id="qcY-gE-r3F"/>
+                <outlet property="playBtn" destination="rRf-FO-cnK" id="J85-n3-HYE"/>
+            </connections>
+            <point key="canvasLocation" x="122.90076335877862" y="24.647887323943664"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play.circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

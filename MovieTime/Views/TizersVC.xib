@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TizersVC" customModule="MovieTime" customModuleProvider="target">
+            <connections>
+                <outlet property="movieInfo" destination="Yjl-Ks-jnn" id="v3n-nJ-iOI"/>
+                <outlet property="movieNameLbl" destination="UlU-td-14C" id="uEE-wa-sMd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="SmT-jq-pHP" id="5ud-C0-0Xa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmT-jq-pHP">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="movie information" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yjl-Ks-jnn">
+                    <rect key="frame" x="16" y="509" width="361" height="309"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movieName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlU-td-14C">
+                    <rect key="frame" x="16" y="446" width="314.33333333333331" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SmT-jq-pHP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1nT-jM-2l0"/>
+                <constraint firstItem="UlU-td-14C" firstAttribute="top" secondItem="SmT-jq-pHP" secondAttribute="bottom" constant="20" id="29v-aG-bSr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yjl-Ks-jnn" secondAttribute="bottom" id="9dB-GO-uhZ"/>
+                <constraint firstItem="SmT-jq-pHP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RDa-yf-QqC"/>
+                <constraint firstItem="UlU-td-14C" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="VJK-Zy-gbQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yjl-Ks-jnn" secondAttribute="trailing" constant="16" id="WKO-lU-1WA"/>
+                <constraint firstItem="SmT-jq-pHP" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="etO-Mi-dZa"/>
+                <constraint firstItem="Yjl-Ks-jnn" firstAttribute="top" secondItem="UlU-td-14C" secondAttribute="bottom" constant="20" id="h1t-XB-2Eh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SmT-jq-pHP" secondAttribute="trailing" id="it2-g8-z9P"/>
+                <constraint firstItem="Yjl-Ks-jnn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nBW-76-gIK"/>
+                <constraint firstItem="UlU-td-14C" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0504695" id="tPr-0R-HKA"/>
+                <constraint firstItem="UlU-td-14C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vdq-xy-KPN"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
